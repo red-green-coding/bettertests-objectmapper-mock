@@ -8,7 +8,7 @@ logback = "1.4.11"
 
 junit = "5.10.0"
 kotest = "5.7.2"
-mockk = "1.13.7"
+mockk = "1.13.8"
 
 ktlint = "0.50.0"
 

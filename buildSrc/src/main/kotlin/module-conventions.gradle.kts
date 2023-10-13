@@ -38,7 +38,6 @@ testlogger {
 configurations {
     all {
         exclude(module = "log4j")
-        exclude(module = "mockito-core")
         exclude(module = "junit")
         exclude(module = "commons-logging")
     }

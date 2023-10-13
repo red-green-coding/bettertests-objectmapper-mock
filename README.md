@@ -1,14 +1,3 @@
-Kotlin single module project blueprint
+Don't mock that ObjectMapper!
 ======================================
 
-Buildtool
-* Gradle (Kotlin DSL)
-
-Basic dependencies
-* Kotlin JVM
-* Kotlin Logging
-* slf4j + logback
-
-Testing
-* Kotest
-* mockk
