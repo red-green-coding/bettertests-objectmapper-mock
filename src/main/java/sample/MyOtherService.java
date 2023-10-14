@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class MyOtherService {
     private static final Logger LOG = LoggerFactory.getLogger(MyOtherService.class);
-    public void useDto(MyDto dto) {
+    public void useValue(MyValue dto) {
         LOG.info("use {}", dto);
     }
 }

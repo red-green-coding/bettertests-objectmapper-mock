@@ -3,12 +3,11 @@ package sample;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 
-public class MyService3 {
-    private Gson mapper;
+public class MyService4 {
+    private Gson mapper = new Gson();
     private MyOtherService myOtherService;
 
-    MyService3(Gson mapper, MyOtherService myOtherService) {
-        this.mapper = mapper;
+    MyService4(MyOtherService myOtherService) {
         this.myOtherService = myOtherService;
     }
 

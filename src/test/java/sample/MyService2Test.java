@@ -24,11 +24,12 @@ public class MyService2Test {
     @Test
     void canConsumeJson() throws Exception {
         var data = """
-                {"name" "MyName", "yearOfBirth": 1974"}
+                {"name": "MyName", "yearOfBirth": "1973"}
                 """;
 
         myService.useData(data);
 
-        Mockito.verify(myOtherService).useDto(Mockito.argThat(arg -> arg.name().equals("MyName")));
+        Mockito.verify(myOtherService)
+                .useValue(Mockito.argThat(arg -> arg.yearOfBirth() != 0));
     }
 }

@@ -14,8 +14,8 @@ public class MyService1 {
 
     void useData(String json) {
         try {
-            var dto = mapper.readValue(json, MyDto.class);
-            myOtherService.useDto(dto);
+            var dto = mapper.readValue(json, MyValue.class);
+            myOtherService.useValue(dto);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
