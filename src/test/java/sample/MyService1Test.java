@@ -15,7 +15,7 @@ public class MyService1Test {
     MyService1 myService;
 
     @Mock
-    MyOtherService myOtherService;
+    CollaboratorService collaboratorService;
 
     @Mock
     ObjectMapper mapper;
@@ -31,7 +31,7 @@ public class MyService1Test {
 
         myService.useData(data);
 
-        Mockito.verify(myOtherService)
+        Mockito.verify(collaboratorService)
                 .useValue(Mockito.argThat(arg -> arg.name().equals("MyName")));
     }
 }

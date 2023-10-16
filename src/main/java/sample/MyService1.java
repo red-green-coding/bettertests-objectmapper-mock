@@ -5,17 +5,17 @@ import java.io.IOException;
 
 public class MyService1 {
     private ObjectMapper mapper;
-    private MyOtherService myOtherService;
+    private CollaboratorService collaboratorService;
 
-    MyService1(MyOtherService myOtherService, ObjectMapper mapper) {
-        this.myOtherService = myOtherService;
+    MyService1(CollaboratorService collaboratorService, ObjectMapper mapper) {
+        this.collaboratorService = collaboratorService;
         this.mapper = mapper;
     }
 
     void useData(String json) {
         try {
             var dto = mapper.readValue(json, MyValue.class);
-            myOtherService.useValue(dto);
+            collaboratorService.useValue(dto);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

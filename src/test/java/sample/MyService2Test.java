@@ -16,20 +16,20 @@ public class MyService2Test {
     MyService1 myService;
 
     @Mock
-    MyOtherService myOtherService;
+    CollaboratorService collaboratorService;
 
     @Spy
-    ObjectMapper mapper;
+    ObjectMapper mapper = MapperConfig.configuredMapper();
 
     @Test
     void canConsumeJson() throws Exception {
         var data = """
-                {"name": "MyName", "yearOfBirth": "1973"}
+                {"Name": "MyName", "yearOfBirth": "1973"}
                 """;
 
         myService.useData(data);
 
-        Mockito.verify(myOtherService)
+        Mockito.verify(collaboratorService)
                 .useValue(Mockito.argThat(arg -> arg.yearOfBirth() != 0));
     }
 }

@@ -14,7 +14,7 @@ public class MyService4Test {
     MyService4 myService;
 
     @Mock
-    MyOtherService myOtherService;
+    CollaboratorService collaboratorService;
 
 
     @Test
@@ -25,7 +25,7 @@ public class MyService4Test {
 
         myService.useData(data);
 
-        Mockito.verify(myOtherService)
+        Mockito.verify(collaboratorService)
                 .useValue(Mockito.argThat(arg -> arg.name().equals("MyName")));
     }
 }

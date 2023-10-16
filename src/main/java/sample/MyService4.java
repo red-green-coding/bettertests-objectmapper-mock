@@ -5,16 +5,16 @@ import com.google.gson.JsonSyntaxException;
 
 public class MyService4 {
     private Gson mapper = new Gson();
-    private MyOtherService myOtherService;
+    private CollaboratorService collaboratorService;
 
-    MyService4(MyOtherService myOtherService) {
-        this.myOtherService = myOtherService;
+    MyService4(CollaboratorService collaboratorService) {
+        this.collaboratorService = collaboratorService;
     }
 
     void useData(String json) {
         try {
             var dto = mapper.fromJson(json, MyValue.class);
-            myOtherService.useValue(dto);
+            collaboratorService.useValue(dto);
         } catch (JsonSyntaxException e) {
             throw new RuntimeException(e);
         }
