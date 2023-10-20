@@ -16,7 +16,6 @@ public class MyService4Test {
     @Mock
     CollaboratorService collaboratorService;
 
-
     @Test
     void canConsumeJson() throws Exception {
         var data = """
